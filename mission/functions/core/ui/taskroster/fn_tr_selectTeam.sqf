@@ -44,7 +44,7 @@ VN_TR_SELECTTEAM_TEAM_LOGO_CTRL ctrlSetText _groupIcon;
 
 private _playerCount = count (missionNamespace getVariable [_team, []]);
 
-VN_TR_SELECTTEAM_TEAM_PLAYERCOUNT_CTRL ctrlSetStructuredText parsetext format["Active Players: %1", _playerCount];
+VN_TR_SELECTTEAM_TEAM_PLAYERCOUNT_CTRL ctrlSetStructuredText parsetext format[localize "STR_Active_Player_Count", _playerCount];
 
 
 //DISABLED, can easily be re-enabled, if we want to change the text on the left side too.

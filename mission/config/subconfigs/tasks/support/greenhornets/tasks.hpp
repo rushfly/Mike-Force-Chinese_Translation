@@ -1,9 +1,9 @@
 class support_gh_cas : support_task
 {
 	taskcategory = "SUP";
-	tasktitle = "Close Air Support";
-	taskname = "Close Air Support";
-	taskdesc = "Provide close air support to %1";
+	tasktitle = $STR_Close_Air;
+	taskname = $STR_Close_Air;
+	taskdesc = $STR_Task_Close_AirDesc;
 	tasktype = "attack";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_gh3.jpg";
 	taskgroups[] = {"GreenHornets"};
@@ -11,7 +11,7 @@ class support_gh_cas : support_task
 	rankpoints = 10;
 	taskprogress = 0;
 
-	requesterDesc = "Request CAS on targets at a specific location";
+	requesterDesc = $STR_Request_Close_AirDesc;
 
 	//The script called when the task is created.
 	taskScript = "vn_mf_fnc_state_machine_task_system";
@@ -25,7 +25,7 @@ class support_gh_cas : support_task
 	//Data for subtasks. These are specific to the script.
 	class destroy_targets
 	{
-		taskname = "Destroy units in area";
-		taskdesc = "Destroy enemy units in this area.";
+		taskname = $STR_CAS_destroy_targets;
+		taskdesc = $STR_CAS_destroy_targetsDesc;
 	};
 };

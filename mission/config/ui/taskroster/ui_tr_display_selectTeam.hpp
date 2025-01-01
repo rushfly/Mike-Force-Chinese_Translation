@@ -117,7 +117,8 @@ class vn_tr_disp_selectTeam
 			w = UIW(7);
 			h = UIH(1.1);
 			
-			text = "ACCEPT";
+			//text = "ACCEPT";
+			text = "确定";
 			font = USEDFONT;
 			sizeEx = TXT_L;
 			onButtonClick = "[] call vn_mf_fnc_tr_selectTeam_set; (ctrlParent param[0]) closeDisplay 1;";
@@ -135,7 +136,8 @@ class vn_tr_disp_selectTeam
 			w = UIW(7);
 			h = UIH(1.1);
 			
-			text = "CANCEL";
+			//text = "CANCEL";
+			text = "取消";
 			font = USEDFONT;
 			sizeEx = TXT_L;
 			onButtonClick = (ctrlParent param[0]) closeDisplay 2;

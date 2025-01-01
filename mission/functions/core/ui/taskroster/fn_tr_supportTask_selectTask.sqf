@@ -27,7 +27,7 @@ private _index = _this#1;
 //disable "Create new support Task" (all requirements must be met, before it get's enabled)
 VN_TR_SUPREQ_CTASK_CTRL ctrlEnable false;
 //reset Map position (if Team or Mission selection has changed)
-VN_TR_SUPREQ_SELPOS_CTRL ctrlSetText "Select Position";
+VN_TR_SUPREQ_SELPOS_CTRL ctrlSetText localize "STR_Select_Position";
 
 //Get the data from the selected Index
 private _supportClassname = VN_TR_SUPREQ_TASK_CTRL lnbData [_index,0];

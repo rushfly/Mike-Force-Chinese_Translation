@@ -34,7 +34,7 @@ VN_TR_CHARINFO_SNUM_CTRL ctrlSetText _player_id;
 _taskName = (taskDescription currentTask player)#1;
 if(isNil "_taskName")then
 {
-	VN_TR_CHARINFO_TASK_CTRL ctrlSetText "No active tasking";
+	VN_TR_CHARINFO_TASK_CTRL ctrlSetText localize "STR_No_active_task";
 }else{
 	VN_TR_CHARINFO_TASK_CTRL ctrlSetText (taskDescription currentTask player)#1;
 };
@@ -43,7 +43,7 @@ _progress = call vn_mf_fnc_points_to_next_rank;
 VN_TR_CHARINFO_PROGR_CTRL ctrlSetText str(_progress);
 
 
-VN_TR_CHARINFO_REWARD_TEXT_CTRL ctrlSetStructuredText parseText "<t size='0.6' font='tt2020base_vn'>Description for current Medal or Ribbon shown. More textspace blablabla roflcopter blub bla, i like trains and more stuff to add omgwtf stuff thingy</t>";
+VN_TR_CHARINFO_REWARD_TEXT_CTRL ctrlSetStructuredText parseText localize "STR_Award_Desc";
 _ctrl_text ctrlCommit 0;
 
 private _awards_cur = player getVariable ["vn_mf_db_awards",vn_mf_default_awards];

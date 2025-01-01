@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=1606;
+		nextID=1571;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=776;
+		nextID=757;
 	};
 	class Camera
 	{
-		pos[]={15757.656,72.217995,7047.3052};
-		dir[]={0.17276351,-0.29721525,-0.93909144};
-		up[]={0.053788774,0.9547863,-0.29238018};
-		aside[]={-0.98352438,1.359731e-007,-0.18093935};
+		pos[]={15907.487,111.16162,6893.1611};
+		dir[]={-0.35691521,-0.44245642,0.82274407};
+		up[]={-0.17610963,0.89676064,0.40595949};
+		aside[]={0.91741908,1.9409345e-007,0.3979882};
 	};
 };
 binarizationWanted=0;
@@ -43,7 +43,6 @@ addons[]=
 	"A3_Characters_F",
 	"characters_f_vietnam_c",
 	"sounds_f_vietnam_c",
-	"cba_jam_vn",
 	"A3_Misc_F_Helpers",
 	"A3_Modules_F"
 };
@@ -51,7 +50,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=15;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -145,19 +144,12 @@ class AddonsMetaData
 		};
 		class Item13
 		{
-			className="cba_jam_vn";
-			name="Community Base Addons - Joint Ammo Magazines";
-			author="CBA Team";
-			url="https://www.github.com/CBATeam/CBA_A3";
-		};
-		class Item14
-		{
 			className="A3_Misc_F";
 			name="Arma 3 - 3D Aids and Helpers";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item14
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
@@ -217,14 +209,14 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=2;
+					value=0;
 				};
 			};
 		};
@@ -268,14 +260,14 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
 				{
 					singleType="SCALAR";
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -285,19 +277,6 @@ class CustomAttributes
 	{
 		name="Scenario";
 		class Attribute0
-		{
-			property="cba_settings_hasSettingsFile";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=1;
-				};
-			};
-		};
-		class Attribute1
 		{
 			property="EnableDebugConsole";
 			expression="true";
@@ -310,7 +289,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		nAttributes=1;
 	};
 };
 class Mission
@@ -318,7 +297,7 @@ class Mission
 	appId=1227700;
 	class Intel
 	{
-		briefingName="Mike Force (v1.00.04 Indev)";
+		briefingName="Mike Force (v1.00.03)";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.34999999;
@@ -480,7 +459,7 @@ class Mission
 			dataType="Marker";
 			position[]={14496.969,31.537531,1686.8328};
 			name="soc_trang";
-			text="SOC TRANG";
+			text="@STR_vn_mf_zone_soc_trang";
 			type="vn_flag_vc";
 			id=22;
 			atlOffset=8.1975307;
@@ -490,7 +469,7 @@ class Mission
 			dataType="Marker";
 			position[]={16285.99,26.360001,3647.9099};
 			name="saigon";
-			text="SAIGON";
+			text="@STR_vn_mf_zone_saigon";
 			type="vn_flag_vc";
 			id=23;
 			atlOffset=-0.01999855;
@@ -500,7 +479,7 @@ class Mission
 			dataType="Marker";
 			position[]={13269.39,21.339088,4247.5146};
 			name="can_tho";
-			text="CAN THO";
+			text="@STR_vn_mf_zone_can_tho";
 			type="vn_flag_vc";
 			id=24;
 			atlOffset=19.764254;
@@ -510,7 +489,7 @@ class Mission
 			dataType="Marker";
 			position[]={15144.487,7.6500001,5682.7598};
 			name="cu_chi";
-			text="CU CHI";
+			text="@STR_vn_mf_zone_cu_chi";
 			type="vn_flag_vc";
 			id=25;
 			atlOffset=-1.2740016;
@@ -520,7 +499,7 @@ class Mission
 			dataType="Marker";
 			position[]={17966.121,15.701,4504.5459};
 			name="ba_ria";
-			text="BA RIA";
+			text="@STR_vn_mf_zone_ba_ria";
 			type="vn_flag_vc";
 			id=26;
 			atlOffset=0.01898098;
@@ -530,7 +509,7 @@ class Mission
 			dataType="Marker";
 			position[]={18636.131,20.915085,6092.1831};
 			name="ban_hoang";
-			text="BAN HOANG";
+			text="@STR_vn_mf_zone_ban_hoang";
 			type="vn_flag_vc";
 			id=27;
 			atlOffset=17.715084;
@@ -540,7 +519,7 @@ class Mission
 			dataType="Marker";
 			position[]={17534.871,16.341,9184.0625};
 			name="hue";
-			text="HUE CITY";
+			text="@STR_vn_mf_zone_hue";
 			type="vn_flag_vc";
 			id=28;
 			atlOffset=9.5866241;
@@ -550,7 +529,7 @@ class Mission
 			dataType="Marker";
 			position[]={15832.856,6.9899998,11267.033};
 			name="khe_gio_valley";
-			text="KHE GIO VALLEY";
+			text="@STR_vn_mf_zone_khe_gio_valley";
 			type="vn_flag_vc";
 			id=29;
 			atlOffset=-0.067022324;
@@ -560,7 +539,7 @@ class Mission
 			dataType="Marker";
 			position[]={6930.5273,73.709999,5410.9922};
 			name="phu_quoc";
-			text="PHU QUOC";
+			text="@STR_vn_mf_zone_phu_quoc";
 			type="vn_flag_cam01";
 			id=30;
 			atlOffset=-0.029998779;
@@ -570,7 +549,7 @@ class Mission
 			dataType="Marker";
 			position[]={7785.8862,80.249001,9089.3057};
 			name="lumphat";
-			text="LUMPHAT";
+			text="@STR_vn_mf_zone_lumphat";
 			type="vn_flag_cam01";
 			id=31;
 			atlOffset=-7.026207;
@@ -580,7 +559,7 @@ class Mission
 			dataType="Marker";
 			position[]={3151.0767,-7.6469998,8701.9805};
 			name="port_sihanoukville";
-			text="PORT SIHANOUKVILLE";
+			text="@STR_vn_mf_zone_port_sihanoukville";
 			type="vn_flag_cam01";
 			id=32;
 			atlOffset=-9.6317911;
@@ -590,7 +569,7 @@ class Mission
 			dataType="Marker";
 			position[]={12752.465,188.927,9245.2803};
 			name="a_shau_valley";
-			text="A SHAU VALLEY";
+			text="@STR_vn_mf_zone_a_shau_valley";
 			type="vn_flag_pavn";
 			id=33;
 			atlOffset=-0.96766663;
@@ -600,7 +579,7 @@ class Mission
 			dataType="Marker";
 			position[]={9606.1211,323.327,11415.898};
 			name="khe_sanh";
-			text="KHE SANH";
+			text="@STR_vn_mf_zone_khe_sanh";
 			type="vn_flag_pavn";
 			id=34;
 			atlOffset=-3.0237427;
@@ -610,7 +589,7 @@ class Mission
 			dataType="Marker";
 			position[]={8675.1533,149.96899,13711.822};
 			name="bru_village";
-			text="BRU VILLAGE";
+			text="@STR_vn_mf_zone_bru_village";
 			type="vn_flag_vc";
 			id=35;
 			atlOffset=-0.09223938;
@@ -620,7 +599,7 @@ class Mission
 			dataType="Marker";
 			position[]={7617.8691,3.529,11762.324};
 			name="attapeu";
-			text="ATTAPEU";
+			text="@STR_vn_mf_zone_attapeu";
 			type="vn_flag_lao";
 			id=36;
 			atlOffset=-0.31310916;
@@ -630,7 +609,7 @@ class Mission
 			dataType="Marker";
 			position[]={1594.7382,71.544823,12585.491};
 			name="plain_of_jars";
-			text="PLAIN OF JARS";
+			text="@STR_vn_mf_zone_plain_of_jars";
 			type="vn_flag_lao";
 			id=37;
 			atlOffset=0.00068664551;
@@ -640,7 +619,7 @@ class Mission
 			dataType="Marker";
 			position[]={4908.6118,456.60999,13634.844};
 			name="mss_leghorn";
-			text="MSS LEGHORN";
+			text="@STR_vn_mf_zone_mss_leghorn";
 			type="vn_flag_usa";
 			id=38;
 			atlOffset=0.073425293;
@@ -650,7 +629,7 @@ class Mission
 			dataType="Marker";
 			position[]={2898.7471,9.4090004,16798.305};
 			name="va_cang";
-			text="VA CANG";
+			text="@STR_vn_mf_zone_va_cang";
 			type="vn_flag_pavn";
 			id=39;
 			atlOffset=-4.8513784;
@@ -660,7 +639,7 @@ class Mission
 			dataType="Marker";
 			position[]={1583.5291,9.5600004,19152.482};
 			name="nodal_lho";
-			text="NODAL LHO";
+			text="@STR_vn_mf_zone_nodal_lho";
 			type="vn_flag_pavn";
 			id=40;
 			atlOffset=5.6714478;
@@ -670,7 +649,7 @@ class Mission
 			dataType="Marker";
 			position[]={5817.6001,101.10059,15811.921};
 			name="mu_gia_pass";
-			text="MU GIA PASS";
+			text="@STR_vn_mf_zone_mu_gia_pass";
 			type="vn_flag_pavn";
 			id=41;
 			atlOffset=-36.543236;
@@ -680,7 +659,7 @@ class Mission
 			dataType="Marker";
 			position[]={9137.0352,298.457,16227.783};
 			name="thud_ridge";
-			text="THUD RIDGE";
+			text="@STR_vn_mf_zone_thud_ridge";
 			type="vn_flag_pavn";
 			id=42;
 			atlOffset=-9.1208191;
@@ -690,7 +669,7 @@ class Mission
 			dataType="Marker";
 			position[]={11276.672,76.516808,14653.059};
 			name="gia_lam_airbase";
-			text="GIA LAM AIRBASE";
+			text="@STR_vn_mf_zone_gia_lam_airbase";
 			type="vn_flag_pavn";
 			id=43;
 			atlOffset=6.2289505;
@@ -700,7 +679,7 @@ class Mission
 			dataType="Marker";
 			position[]={14972.457,39.278999,13091.473};
 			name="hanoi_docks";
-			text="HANOI DOCKS";
+			text="@STR_vn_mf_zone_hai_phong";
 			type="vn_flag_pavn";
 			id=44;
 			atlOffset=28.548677;
@@ -710,7 +689,7 @@ class Mission
 			dataType="Marker";
 			position[]={14530.094,5.7534328,15660.496};
 			name="ha_long_navy_base";
-			text="HA LONG NAVY BASE";
+			text="@STR_vn_mf_zone_ha_long_navy_base";
 			type="vn_flag_pavn";
 			id=46;
 			atlOffset=1.6905398;
@@ -720,7 +699,7 @@ class Mission
 			dataType="Marker";
 			position[]={12155.021,422.935,17635.916};
 			name="son_tay";
-			text="SON TAY";
+			text="@STR_vn_mf_zone_son_tay";
 			type="vn_flag_pavn";
 			id=47;
 			atlOffset=418.005;
@@ -730,7 +709,7 @@ class Mission
 			dataType="Marker";
 			position[]={1580.295,9.6040001,19151.4};
 			name="zone_nodal_lho";
-			text="NODAL LHO";
+			text="@STR_vn_mf_zone_nodal_lho";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -746,7 +725,7 @@ class Mission
 			dataType="Marker";
 			position[]={2893.9299,9.4099998,16797.684};
 			name="zone_va_cang";
-			text="VA CANG";
+			text="@STR_vn_mf_zone_va_cang";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -761,7 +740,7 @@ class Mission
 			dataType="Marker";
 			position[]={5808.8857,136.46301,15802.194};
 			name="zone_mu_gia_pass";
-			text="MU GIA PASS";
+			text="@STR_vn_mf_zone_mu_gia_pass";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -776,7 +755,7 @@ class Mission
 			dataType="Marker";
 			position[]={1594.7521,71.532227,12585.54};
 			name="zone_plain_of_jars";
-			text="PLAIN OF JARS";
+			text="@STR_vn_mf_zone_plain_of_jars";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -791,7 +770,7 @@ class Mission
 			dataType="Marker";
 			position[]={3149.9971,1.596,8702.498};
 			name="zone_sihanoukville";
-			text="PORT SIHANOUKVILLE";
+			text="@STR_vn_mf_zone_port_sihanoukville";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -806,7 +785,7 @@ class Mission
 			dataType="Marker";
 			position[]={6929.5938,65.210815,5409.0156};
 			name="zone_phu_quoc";
-			text="PHU QUOC";
+			text="@STR_vn_mf_zone_phu_quoc";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -821,7 +800,7 @@ class Mission
 			dataType="Marker";
 			position[]={7785.1641,84.087997,9090.2197};
 			name="zone_lumphat";
-			text="LUMPHAT";
+			text="@STR_vn_mf_zone_lumphat";
 			markerType="ELLIPSE";
 			type="ellipse";
 			a=-500;
@@ -834,7 +813,7 @@ class Mission
 			dataType="Marker";
 			position[]={7617.5811,0.27599999,11762.343};
 			name="zone_attapeu";
-			text="ATTAPEU";
+			text="@STR_vn_mf_zone_attapeu";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -849,7 +828,7 @@ class Mission
 			dataType="Marker";
 			position[]={9605.2842,320.21701,11415.693};
 			name="zone_da_krong";
-			text="KHE SANH";
+			text="@STR_vn_mf_zone_khe_sanh";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -864,7 +843,7 @@ class Mission
 			dataType="Marker";
 			position[]={8674.8877,146.761,13712.752};
 			name="zone_bru_village";
-			text="BRU_VILLAGE";
+			text="@STR_vn_mf_zone_bru_village";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -879,7 +858,7 @@ class Mission
 			dataType="Marker";
 			position[]={9136.6611,295.147,16227.518};
 			name="zone_thud_ridge";
-			text="THUD RIDGE";
+			text="@STR_vn_mf_zone_thud_ridge";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -894,7 +873,7 @@ class Mission
 			dataType="Marker";
 			position[]={12154.686,419.66501,17635.662};
 			name="zone_son_tay";
-			text="SON TAY";
+			text="@STR_vn_mf_zone_son_tay";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -909,7 +888,7 @@ class Mission
 			dataType="Marker";
 			position[]={14530.154,2.4846191,15660.765};
 			name="zone_ha_long_navy_base";
-			text="HA LONG NAVY BASE";
+			text="@STR_vn_mf_zone_ha_long_navy_base";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -924,7 +903,7 @@ class Mission
 			dataType="Marker";
 			position[]={11276.601,73.342003,14654.418};
 			name="zone_gia_lam_airbase";
-			text="GIA LAM AIRBASE";
+			text="@STR_vn_mf_zone_gia_lam_airbase";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -939,7 +918,7 @@ class Mission
 			dataType="Marker";
 			position[]={12994.111,27,13359.607};
 			name="zone_hanoi_city";
-			text="HANOI CITY";
+			text="@STR_vn_mf_zone_hanoi_city";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -954,7 +933,7 @@ class Mission
 			dataType="Marker";
 			position[]={15832.549,3.7360001,11268.762};
 			name="zone_khe_gio_valley";
-			text="KHE GIO VALLEY";
+			text="@STR_vn_mf_zone_khe_gio_valley";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -969,7 +948,7 @@ class Mission
 			dataType="Marker";
 			position[]={17533.928,12.509766,9184.1738};
 			name="zone_hue";
-			text="HUE CITY";
+			text="@STR_vn_mf_zone_hue";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -984,7 +963,7 @@ class Mission
 			dataType="Marker";
 			position[]={12746.884,186.09599,9250.8066};
 			name="zone_a_shau_valley";
-			text="A SHAU VALLEY";
+			text="@STR_vn_mf_zone_a_shau_valley";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -999,7 +978,7 @@ class Mission
 			dataType="Marker";
 			position[]={13269.542,18.364,4251.0786};
 			name="zone_can_tho";
-			text="CAN THO";
+			text="@STR_vn_mf_zone_can_tho";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -1014,7 +993,7 @@ class Mission
 			dataType="Marker";
 			position[]={14500.624,26.909246,1682.8512};
 			name="zone_soc_trang";
-			text="SOC TRANG";
+			text="@STR_vn_mf_zone_soc_trang";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -1029,7 +1008,7 @@ class Mission
 			dataType="Marker";
 			position[]={16284.36,23.106001,3647.6709};
 			name="zone_saigon";
-			text="SAIGON";
+			text="@STR_vn_mf_zone_saigon";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -1044,7 +1023,7 @@ class Mission
 			dataType="Marker";
 			position[]={15143.975,4.3959999,5683.4771};
 			name="zone_cu_chi";
-			text="CU CHI";
+			text="@STR_vn_mf_zone_cu_chi";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -1059,7 +1038,7 @@ class Mission
 			dataType="Marker";
 			position[]={18634.85,17.838585,6093.3071};
 			name="zone_ban_hoang";
-			text="BAN HOANG";
+			text="@STR_vn_mf_zone_ban_hoang";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -1074,7 +1053,7 @@ class Mission
 			dataType="Marker";
 			position[]={17966.355,12.448,4504.5288};
 			name="zone_ba_ria";
-			text="BA RIA";
+			text="@STR_vn_mf_zone_ba_ria";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -1089,7 +1068,7 @@ class Mission
 			dataType="Marker";
 			position[]={11423.28,14.911,6327.8989};
 			name="zone_fsb_quan_loi";
-			text="FSB QUAN LOI";
+			text="@STR_vn_mf_zone_fsb_quan_loi";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -1596,7 +1575,7 @@ class Mission
 			dataType="Marker";
 			position[]={17043.596,24.93,4223.3311};
 			name="connector_ba_ria_saigon";
-			text="Connector Ba Ria to Saigon";
+			text="@STR_connector_ba_ria_saigon";
 			type="mil_arrow";
 			angle=215.44501;
 			id=408;
@@ -4657,7 +4636,7 @@ class Mission
 			dataType="Marker";
 			position[]={19635.82,19.599001,6783.3667};
 			name="zone_da_nang";
-			text="BAN HOANG";
+			text="@STR_vn_mf_zone_ban_hoang";
 			markerType="ELLIPSE";
 			type="ellipse";
 			fillName="SolidBorder";
@@ -11996,7 +11975,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={16243.976,16.121468,7034.8594};
-								angles[]={0,0.43778825,0};
+								angles[]={0,0.43778825,-0};
 							};
 							side="Empty";
 							flags=5;
@@ -12030,7 +12009,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={16243.112,16.03809,7038.2739};
-								angles[]={0,3.589155,0};
+								angles[]={0,3.589155,-0};
 							};
 							side="Empty";
 							class Attributes
@@ -12046,7 +12025,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={16244.107,14.98,7037.3901};
-								angles[]={0,6.1902957,0};
+								angles[]={-0,6.1902957,0};
 							};
 							init="['utility_airport', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 							id=1509;
@@ -12065,7 +12044,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={17445.703,31.096918,5656.5903};
-										angles[]={0,0.036181852,0};
+										angles[]={0,0.036181852,-0};
 									};
 									side="Empty";
 									flags=5;
@@ -12127,7 +12106,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={17454.791,30.990601,5656.6128};
-										angles[]={0,0.036181852,0};
+										angles[]={0,0.036181852,-0};
 									};
 									side="Empty";
 									flags=5;
@@ -12269,7 +12248,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={15787.007,16.121468,7098.5537};
-										angles[]={0,1.6279174,0};
+										angles[]={0,1.6279174,-0};
 									};
 									side="Empty";
 									flags=5;
@@ -12303,7 +12282,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={15786.839,16.121468,7089.4663};
-										angles[]={0,1.6279174,0};
+										angles[]={0,1.6279174,-0};
 									};
 									side="Empty";
 									flags=5;
@@ -12337,7 +12316,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={15786.625,16.121468,7080.5264};
-										angles[]={0,1.6279174,0};
+										angles[]={0,1.6279174,-0};
 									};
 									side="Empty";
 									flags=5;
@@ -12371,7 +12350,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={15785.965,16.121468,7067.3926};
-										angles[]={0,1.6279174,0};
+										angles[]={0,1.6279174,-0};
 									};
 									side="Empty";
 									flags=5;
@@ -12405,7 +12384,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={15785.797,16.121468,7058.3052};
-										angles[]={0,1.6279174,0};
+										angles[]={0,1.6279174,-0};
 									};
 									side="Empty";
 									flags=5;
@@ -12439,7 +12418,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={15785.583,16.121468,7049.3652};
-										angles[]={0,1.6279174,0};
+										angles[]={0,1.6279174,-0};
 									};
 									side="Empty";
 									flags=5;
@@ -12473,7 +12452,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={15789.096,14.98,7099.9546};
-										angles[]={0,1.0972396,0};
+										angles[]={-0,1.0972396,0};
 									};
 									init="['large_statics', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 									id=1544;
@@ -12485,7 +12464,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={15788.928,14.98,7090.8672};
-										angles[]={0,1.0972396,0};
+										angles[]={-0,1.0972396,0};
 									};
 									init="['large_statics', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 									id=1547;
@@ -12497,7 +12476,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={15788.714,14.98,7081.9272};
-										angles[]={0,1.0972396,0};
+										angles[]={-0,1.0972396,0};
 									};
 									init="['large_statics', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 									id=1550;
@@ -12509,7 +12488,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={15788.054,14.98,7068.7935};
-										angles[]={0,1.0972396,0};
+										angles[]={-0,1.0972396,0};
 									};
 									init="['large_statics', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 									id=1553;
@@ -12521,7 +12500,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={15787.886,14.98,7059.7061};
-										angles[]={0,1.0972396,0};
+										angles[]={-0,1.0972396,0};
 									};
 									init="['large_statics', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 									id=1556;
@@ -12533,7 +12512,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={15787.672,14.98,7050.7661};
-										angles[]={0,1.0972396,0};
+										angles[]={-0,1.0972396,0};
 									};
 									init="['large_statics', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
 									id=1559;
@@ -12561,7 +12540,7 @@ class Mission
 						};
 					};
 					id=1379;
-					atlOffset=0.39266682;
+					atlOffset=6.8650513;
 				};
 				class Item3
 				{
@@ -13368,7 +13347,7 @@ class Mission
 					name="Air transport";
 					class Entities
 					{
-						items=21;
+						items=15;
 						class Item0
 						{
 							dataType="Object";
@@ -13679,133 +13658,9 @@ class Mission
 							type="Sign_Arrow_Direction_Green_F";
 							atlOffset=1.000001;
 						};
-						class Item15
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15770.414,16.121468,7028.2046};
-								angles[]={0,4.8158174,-0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=1599;
-							type="vn_signad_sponsors_f";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item16
-						{
-							dataType="Logic";
-							class PositionInfo
-							{
-								position[]={15756.339,14.98,7036.8936};
-								angles[]={-0,5.7423425,0};
-							};
-							init="['c119_unarmed', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
-							id=1600;
-							type="Logic";
-						};
-						class Item17
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15737.045,16.03809,7050.5015};
-								angles[]={0,3.1412013,0};
-							};
-							side="Empty";
-							class Attributes
-							{
-							};
-							id=1601;
-							type="Sign_Arrow_Direction_Green_F";
-							atlOffset=1.000001;
-						};
-						class Item18
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15943.627,16.121468,6891.2007};
-								angles[]={0,3.1385608,-0};
-							};
-							side="Empty";
-							flags=5;
-							class Attributes
-							{
-								disableSimulation=1;
-							};
-							id=1602;
-							type="vn_signad_sponsors_f";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-						class Item19
-						{
-							dataType="Logic";
-							class PositionInfo
-							{
-								position[]={15959.27,14.98,6879.9424};
-								angles[]={-0,5.7423425,0};
-							};
-							init="['c119_armed', 0] call vn_mf_fnc_veh_asset_3DEN_spawn_point";
-							id=1603;
-							type="Logic";
-						};
-						class Item20
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={15969.432,16.03809,6868.0215};
-								angles[]={0,6.2823877,0};
-							};
-							side="Empty";
-							class Attributes
-							{
-							};
-							id=1604;
-							type="Sign_Arrow_Direction_Green_F";
-							atlOffset=1.000001;
-						};
 					};
 					id=1397;
-					atlOffset=0.57143211;
+					atlOffset=0.57141113;
 				};
 				class Item9
 				{
@@ -14734,7 +14589,7 @@ class Mission
 				};
 			};
 			id=1325;
-			atlOffset=-0.58335304;
+			atlOffset=-1.7864037;
 		};
 		class Item231
 		{
@@ -14802,7 +14657,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15796.783,14.98,7091.2783};
-				angles[]={0,1.6206921,0};
+				angles[]={0,1.6206921,-0};
 			};
 			side="Empty";
 			flags=5;
@@ -14837,7 +14692,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15795.348,14.98,7063.332};
-				angles[]={0,1.6206921,0};
+				angles[]={0,1.6206921,-0};
 			};
 			side="Empty";
 			flags=5;
@@ -14906,11 +14761,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=127;
+			nextID=123;
 		};
 		class Links
 		{
-			items=127;
+			items=123;
 			class Item0
 			{
 				linkID=0;
@@ -16136,46 +15991,6 @@ class Mission
 				linkID=122;
 				item0=1563;
 				item1=1565;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item123
-			{
-				linkID=123;
-				item0=1601;
-				item1=1600;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item124
-			{
-				linkID=124;
-				item0=1599;
-				item1=1600;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item125
-			{
-				linkID=125;
-				item0=1604;
-				item1=1603;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item126
-			{
-				linkID=126;
-				item0=1602;
-				item1=1603;
 				class CustomData
 				{
 					type="Sync";

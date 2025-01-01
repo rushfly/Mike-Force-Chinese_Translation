@@ -1,9 +1,9 @@
 class defend_counterattack : task
 {
 	taskcategory = "PRI";
-	tasktitle = "Defend from Counterattack";
-	taskname = "Defend from Counterattack";
-	taskdesc = "The enemy is preparing a counterattack, hold the zone at all costs.";
+	tasktitle = $STR_Defend_Counterattack;
+	taskname = $STR_Defend_Counterattack;
+	taskdesc = $STR_Defend_Counterattack_Desc;
 	tasktype = "defend";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_mf3.jpg";
 	rankpoints = 10;
@@ -21,23 +21,23 @@ class defend_counterattack : task
 
 	class prepare_zone 
 	{
-		taskname = "Prepare for Attack";
-		taskdesc = "The enemy will launch their attack soon. Set up defenses.";
+		taskname = $STR_prepare_zone;
+		taskdesc = $STR_prepare_zone_desc;
 	};
 
 	class defend_zone
 	{
-		taskname = "Defend the Zone";
-		taskdesc = "Defend the zone until all hostiles have been eliminated.";
+		taskname = $STR_defend_zone;
+		taskdesc = $STR_defend_zone_desc;
 	};
 };
 
 class defend_base : task
 {
 	taskcategory = "PRI";
-	tasktitle = "Defend FOB from Attack";
-	taskname = "Defend FOB from Attack";
-	taskdesc = "The enemy is preparing to attack an FOB. Prepare to defend it!";
+	tasktitle = $STR_defend_base;
+	taskname = $STR_defend_base;
+	taskdesc = $STR_defend_base_desc;
 	tasktype = "defend";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_mf3.jpg";
 	rankpoints = 10;
@@ -55,14 +55,14 @@ class defend_base : task
 
 	class prepare_base 
 	{
-		taskname = "Prepare for Attack";
-		taskdesc = "The enemy will launch their attack soon. Set up defenses.";
+		taskname = $STR_prepare_zone;
+		taskdesc = $STR_prepare_zone_desc;
 	};
 
 	class defend_base
 	{
-		taskname = "Defend the FOB";
-		taskdesc = "Defend the FOB until all hostiles have been eliminated.";
+		taskname = $STR_defend_base_task;
+		taskdesc = $STR_defend_zone_desc;
 	};
 };
 

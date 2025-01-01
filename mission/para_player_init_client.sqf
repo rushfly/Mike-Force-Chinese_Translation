@@ -272,7 +272,7 @@ if hasInterface then
 //DEV (ToDo): Until client Scheduler is added:
 []spawn
 {
-	systemchat "starting infopanel handler loop";
+	systemchat localize "CHAT_START_PANEL";
 	"para_infopanel" cutRsc ["para_infopanel", "PLAIN", -1, true];
 	while{true}do
 	{

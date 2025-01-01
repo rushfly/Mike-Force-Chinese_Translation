@@ -91,9 +91,9 @@ class support_resupply_workshop : support_resupply
 class support_transport : support_task
 {
 	taskcategory = "SUP";
-	tasktitle = "Collect Squad";
-	taskname = "Collect Squad";
-	taskdesc = "Collect %1 from the given position, and drop them at their desired location.";
+	tasktitle = $STR_Collect_Squad;
+	taskname = $STR_Collect_Squad;
+	taskdesc = $STR_Collect_Squad_desc;
 	tasktype = "land";
 	taskgroups[] = {"ACAV", "GreenHornets"};
 	//TODO: Remove GreenHornets and ACAV
@@ -101,7 +101,7 @@ class support_transport : support_task
 	rankpoints = 10;
 	taskprogress = 0;
 
-	requesterDesc = "Request pickup from a specific location.";
+	requesterDesc = $STR_Request_Pickup_Desc;
 
 	//The script called when the task is created.
 	taskScript = "vn_mf_fnc_state_machine_task_system";
@@ -116,14 +116,14 @@ class support_transport : support_task
 	//Data for subtasks. These are specific to the script.
 	class mount
 	{
-		taskname = "Pickup Squad";
-		taskdesc = "Collect the squad from this position";
+		taskname = $STR_Task_Pickup;
+		taskdesc = $STR_Task_Pickup_desc;
 	};
 
 	class transport
 	{
-		taskname = "Transport the Squad";
-		taskdesc = "Transport the squad to the location of their choice.";
+		taskname = $STR_Task_Transport;
+		taskdesc = $STR_Task_Transport_desc;
 	};
 };
 

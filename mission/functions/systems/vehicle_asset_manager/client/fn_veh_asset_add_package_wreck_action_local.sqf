@@ -20,7 +20,7 @@ params ["_target"];
 ["AddPackageWreck", [player, []]] call para_g_fnc_event_dispatch;
 
 _target addAction [
-	"Package wreck for transport",
+	localize "STR_Package_Wreck",
 	{
 		params ["_target", "_caller", "_actionId", "_args"];
 		["packageforslingloading", [_target]] call para_c_fnc_call_on_server;

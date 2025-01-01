@@ -75,7 +75,7 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			colorText[] = {0.1,0.1,0.1,0.9};
 			colorBackground[] = {0,0,0,0};
 			size = TXT_M;
-			text = "Choose your team.";	//loc
+			text = $STR_Choose_Team;	//loc
 			tooltip = "";
 		};
 		
@@ -90,7 +90,7 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			colorText[] = {0.1,0.1,0.1,0.9};
 			colorBackground[] = {0,0,0,0};
 			size = TXT_S;
-			text = "Active Players:";	//loc
+			text = $STR_Active_Player;	//loc
 			tooltip = "";
 		};
 		
@@ -169,7 +169,7 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			colorText[] = {0.1,0.1,0.1,0.9};
 			colorBackground[] = {0,0,0,0};
 			size = TXT_M;
-			text = "Select a Team";	//loc
+			text = $STR_Select_Team;	//loc
 			tooltip = "";
 		};
 		
@@ -184,7 +184,7 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			colorText[] = {0.1,0.1,0.1,0.9};
 			colorBackground[] = {0,0,0,0};
 			size = TXT_S;
-			text = "Take the fight to the VC in close quarter combat. Access to static weapon emplacements";	//loc
+			text = $STR_vn_mf_RscStructuredText;	//loc
 			tooltip = "";
 		};
 	};
@@ -219,7 +219,7 @@ class vn_tr_supportRequest_miniMap_accept: vn_mf_RscButton
 	
 	onButtonClick = "systemchat str [_this, 'ACCEPT']; call vn_mf_fnc_tr_supportTask_selectPosition_accept;";
 	MouseButtonDown = "";	//No _this param given
-	text = "ACCEPT";
+	text = $STR_ACCEPT;	//loc
 };
 
 class vn_tr_supportRequest_miniMap_abort: vn_mf_RscButton
@@ -238,7 +238,7 @@ class vn_tr_supportRequest_miniMap_abort: vn_mf_RscButton
 	
 	onButtonClick = "systemchat str [_this, 'ABORT']; [] spawn vn_mf_fnc_tr_supportTask_map_hide;";
 	MouseButtonDown = "";	//No _this param given
-	text = "ABORT";
+	text = $STR_ABORT;	//loc
 };
 
 class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
@@ -295,7 +295,7 @@ class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
 			colorText[] = {0.1,0.1,0.1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			size = TXT_S;
-			text = "Select Task";
+			text = $STR_Select_Task;
 			tooltip = "";
 		};
 		class supportTask: vn_mf_RscListNBox //vn_mf_RscListBox
@@ -342,7 +342,7 @@ class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
 			colorText[] = {0.1,0.1,0.1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			size = TXT_S;
-			text = "Select Team";
+			text = $STR_Select_Team;
 			tooltip = "";
 		};
 		class supportTeam: supportTask
@@ -377,7 +377,7 @@ class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
 			sizeEx = TXT_S;
 			onButtonClick = "_this#0 ctrlEnable false; call vn_mf_fnc_tr_supportTask_selectPosition;";
 			MouseButtonDown = "";	//No _this param given
-			text = "Select Position";
+			text = $STR_Select_Position;
 		};
 		
 		class createTask: vn_mf_RscButton
@@ -397,7 +397,7 @@ class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
 			sizeEx = TXT_M;
 			onButtonClick = "systemchat str [_this,'4. Support Request']; (_this#0) ctrlEnable false; call vn_mf_fnc_tr_supportTask_create;";
 			MouseButtonDown = "";	//No _this param given
-			text = "Create new support task";
+			text = $STR_Create_Support_Task;
 		};
 	};
 };
@@ -444,7 +444,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			text = "playername";
 			font = USEDFONT;
 			sizeEx = TXT_S;
-			tooltip = "playername";
+			tooltip = $STR_playername;
 		};
 		
 		class serialnumber: vn_mf_RscText
@@ -463,7 +463,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			text = "serialnumber";
 			font = USEDFONT;
 			sizeEx = TXT_S;
-			tooltip = "serialnumber";
+			tooltip = $STR_serialnumber;
 		};
 		
 		class playerrank: vn_mf_RscText
@@ -482,7 +482,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			text = "playerrank";
 			font = USEDFONT;
 			sizeEx = TXT_S;
-			tooltip = "playerrank";
+			tooltip = $STR_playerrank;
 		};
 		
 		class curtaskname: vn_mf_RscText
@@ -501,7 +501,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			text = "curtaskname";
 			font = USEDFONT;
 			sizeEx = TXT_S;
-			tooltip = "curtaskname";
+			tooltip = $STR_curtaskname;
 		};
 		
 		class worldname: vn_mf_RscText
@@ -520,7 +520,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			text = "worldname";
 			font = USEDFONT;
 			sizeEx = TXT_S;
-			tooltip = "worldname";
+			tooltip = $STR_worldname;
 		};
 		
 		class rankpoints: vn_mf_RscText
@@ -539,7 +539,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			text = "-1";
 			font = USEDFONT;
 			sizeEx = TXT_S;
-			tooltip = "rankpoints";
+			tooltip = $STR_vn_mf_rankpoint;
 		};
 		
 		class rankprogress: vn_mf_RscText
@@ -558,7 +558,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			text = "-1";
 			font = USEDFONT;
 			sizeEx = TXT_S;
-			tooltip = "rankprogress";
+			tooltip = $STR_rankprogress;
 		};
 		
 		class text_reward_text: vn_mf_RscStructuredText
@@ -733,7 +733,7 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 			colorText[] = {0.1,0.1,0.1,0.9};
 			colorBackground[] = {1,0,0,0.0};
 			shadow = 0;
-			text = "Mission Name";
+			text = $STR_Mission_Name;
 			font = USEDFONT_B;
 			sizeEx = TXT_CST(0.9);
 			tooltip = "";
@@ -751,7 +751,7 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 			colorText[] = {0.1,0.1,0.1,0.9};
 			colorBackground[] = {1,0,0,0.0};
 			shadow = 0;
-			text = "Mission Description";
+			text = $STR_Mission_Desc;
 			font = USEDFONT;
 			sizeEx = TXT_CST(0.75);
 			tooltip = "";
@@ -809,7 +809,8 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 			sizeEx = TXT_L;
 			text = "0m";
 			// tooltip = "Coordinates - Format: XXXYYY";
-			tooltip = "Distance to Mission";
+			//tooltip = "Distance to Mission";
+			tooltip = "与任务距离";
 		};
 		
 		class btn_mission_setActive: vn_mf_RscButton
@@ -830,8 +831,8 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			onButtonClick = "call vn_mf_fnc_tr_mission_setActive;";
 			// MouseButtonDown = "";	//No _this param given
-			text = "make active";
-			tooltip = "Set this mission as active.";
+			text = $STR_btn_mission_setActive;
+			tooltip = $STR_btn_mission_setActive_tip;
 		};
 	};
 };

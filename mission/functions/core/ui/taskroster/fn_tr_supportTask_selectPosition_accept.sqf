@@ -22,7 +22,7 @@ private _pos = mapGridPosition (getMarkerPos _markerName);
 systemchat str [(getMarkerPos _markerName),mapGridPosition (getMarkerPos _markerName)];
 
 //update text of map selection
-VN_TR_SUPREQ_SELPOS_CTRL ctrlSetText format["Selected Position: [%1]", _pos];
+VN_TR_SUPREQ_SELPOS_CTRL ctrlSetText format[localize "STR_SELE_POS", _pos];
 //update temporary data
 vn_tr_supportMissionInfo set [1,(getMarkerPos _markerName)];
 deleteMarkerLocal _markerName;

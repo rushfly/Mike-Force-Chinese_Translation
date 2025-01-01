@@ -214,7 +214,8 @@ class vn_tr_disp_taskRoster_Main
 			onButtonClick = "call vn_mf_fnc_tr_cleanRightSheet; call vn_mf_fnc_tr_supportTask_show;";
 			
 			MouseButtonDown = "";	//No _this param given
-			text = "Request a support task";
+			//text = "Request a support task";
+			text = "请求支援";
 		};
 		class requestMission_flag: vn_mf_RscPicture
 		{
@@ -240,7 +241,8 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(14);
 			h = UIH(1);
 			
-			text = "No active Task";
+			//text = "No active Task";
+			text = "没有激活的任务";
 			
 			colorText[] = {0,0,0,1};
 			colorBackground[] = {0,0,1,0.0};

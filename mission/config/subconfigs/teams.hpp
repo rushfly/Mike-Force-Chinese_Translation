@@ -1,9 +1,9 @@
 // limits and vanilla/custom trait values
 class MikeForce
 {
-    name = "Mike Force [Infantry]";
+    name = $STR_Mike_Force;
     icon = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_MikeForce_HL.paa";
-    shortname = "Mike Force";
+    shortname = $STR_SHT_Mike_Force;
     unit = "vn_b_men_army_01";
 
     class rolelimits 
@@ -34,9 +34,9 @@ class MikeForce
 };
 class SpikeTeam
 {
-    name = "Spike Team [Special Forces]";
+    name = $STR_Spike_Team;
     icon = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_SpikeTeam_HL.paa";
-    shortname = "Spike Team";
+    shortname = $STR_SHT_Spike_Team;
     unit = "vn_b_men_army_01";
 
     class rolelimits 
@@ -68,9 +68,9 @@ class SpikeTeam
 };
 class ACAV
 {
-    name = "Armored Cavalry [Ground Support]";
+    name = $STR_ACAV;
     icon = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV_HL.paa";
-    shortname = "ACAV";
+    shortname = $STR_SHT_ACAV;
     unit = "vn_b_men_army_01";
 
     class rolelimits 
@@ -101,9 +101,9 @@ class ACAV
 };
 class GreenHornets
 {
-    name = "Green Hornets [Air Support]";
+    name = $STR_GreenHornets;
     icon = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_Hornets_HL.paa";
-    shortname = "Green Hornets";
+    shortname = $STR_SHT_GreenHornets;
     unit = "vn_b_men_army_01";
     
     class rolelimits 
