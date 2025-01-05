@@ -330,7 +330,7 @@ class rvn_military_merit_first_republic_medal
 };
 class rvn_civil_action_unit_citation
 {
-	title = "STR_vn_mf_rvn_civil_action_unit_citation";
+	title = "STR_vn_mf_rvn_civil_action_unit_citation_medal";
 	desc = $STR_vn_mf_rvn_civil_action_unit_citation_medal_desc;
 	levels[] =
 	{

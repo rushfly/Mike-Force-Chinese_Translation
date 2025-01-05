@@ -2,6 +2,10 @@
 <Project name="VN_MF_GAMEMODE">
   <Package name="MF">
     <Container name="default">
+      <Key ID="STR_Press8">
+        <Original>Press [8] to close.&lt;br /&gt;Press 2x[8] to open in field manual.</Original>
+        <Chinesesimp>按[8]关闭.&lt;br /&gt;按2次[8]在战地手册中打开.</Chinesesimp>
+      </Key>
       <Key ID="STR_connector_ba_ria_saigon">
         <Original>Connector Ba Ria to Saigon</Original>
         <Chinesesimp>连接巴里亚到胡志明</Chinesesimp>
@@ -977,7 +981,7 @@
       </Key>
       <Key ID="STR_vn_mf_other_keys_long">
         <Original>Press 'Y' to use gesture menu ('Z' on QWERTZ keyboards).&lt;br&gt;&lt;/br&gt;Press 'H' to open task roster.&lt;br&gt;&lt;/br&gt;Press '6' to activate wheel menu.&lt;br&gt;&lt;/br&gt;</Original>
-        <Chinesesimp>按 'Y' 使用手势菜单（QWERTZ 键盘上按 'Z'）。&lt;br&gt;&lt;/br&gt;按 'H' 打开任务清单。&lt;br&gt;&lt;/br&gt;按 '6' 激活轮菜单。&lt;br&gt;&lt;/br&gt;</Chinesesimp>
+        <Chinesesimp>按 'Y' 使用手势菜单（QWERTZ 键盘上按 'Z'）。&lt;br&gt;&lt;/br&gt;按 'H' 打开任务清单。&lt;br&gt;&lt;/br&gt;按 '6' 激活轮盘菜单。&lt;br&gt;&lt;/br&gt;</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_restrictedzone_long">
         <Original>You are not allowed to build in this area!</Original>
@@ -993,7 +997,7 @@
       </Key>
       <Key ID="STR_vn_mf_purple_heart_desc">
         <Original>KIA while serving in ACAV / Green Hornets</Original>
-        <Chinesesimp>在 ACAV / 绿蜂服役中阵亡</Chinesesimp>
+        <Chinesesimp>在 装甲骑兵 / 绿蜂服役中阵亡</Chinesesimp>
       </Key>
       <Key ID="STR_vn_mf_rvn_wound_medal">
         <Original>RVN Wound Medal</Original>
@@ -1450,7 +1454,7 @@
       </Key>
       <Key ID="STR_para_overlay_buildable_supplies_until_full">
         <Original>Supplies Until Full: %1</Original>
-        <Chinesesimp>直到满额补给：%1</Chinesesimp>
+        <Chinesesimp>离满额补给还有：%1</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_buildable_supply_capacity">
         <Original>Supply Capacity: %1</Original>
@@ -1458,7 +1462,7 @@
       </Key>
       <Key ID="STR_para_overlay_buildable_lifetime">
         <Original>Time Until Decay: %1 hours %2 minutes</Original>
-        <Chinesesimp>直到衰退的时间：%1小时 %2分钟</Chinesesimp>
+        <Chinesesimp>离衰退的时间还有：%1小时 %2分钟</Chinesesimp>
       </Key>
       <Key ID="STR_para_overlay_good">
         <Original>Good</Original>
@@ -1732,7 +1736,7 @@
       <Key ID="STR_vn_mf_buildingMenu_condition_inACav">
         <Original>In ACav</Original>
         <English>In ACav</English>
-        <Chinesesimp>扮演ACav</Chinesesimp>
+        <Chinesesimp>扮演装甲骑兵</Chinesesimp>
       </Key>
     </Container>
     <Container name="params">
